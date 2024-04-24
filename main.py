@@ -34,9 +34,10 @@ while score != 50:
 
     if answer_state == "Exit":
         # TODO: create and csv file which contains remaining states to guess by user
-        for state in states:
-            if state not in correct_answer:
-                left_to_guess.append(state)
+        # for state in states:
+        #     if state not in correct_answer:
+        #         left_to_guess.append(state)
+        left_to_guess = [state for state in states if state not in correct_answer]
         remaining_states = pandas.DataFrame(left_to_guess)
         remaining_states.to_csv("remaining_states.csv")
         break
