@@ -10,11 +10,7 @@ turtle.shape(IMAGE)
 
 # TODO: check if guess is among the 50 states
 states_data = pandas.read_csv("50_states.csv")
-# print(states_data)
 states = states_data["state"].to_list()
-
-
-# print(states)
 
 
 def write_state_names(state_name, x_cord, y_cord):
