@@ -8,7 +8,6 @@ IMAGE = "blank_states_img.gif"
 screen.addshape(IMAGE)
 turtle.shape(IMAGE)
 
-# TODO: check if guess is among the 50 states
 states_data = pandas.read_csv("50_states.csv")
 states = states_data["state"].to_list()
 
@@ -42,6 +41,7 @@ while score != 50:
         remaining_states.to_csv("remaining_states.csv")
         break
 
+    # TODO: check if guess is among the 50 states
     if (answer_state in states) and (answer_state not in correct_answer):
         # TODO: write correct guess onto map
         state = states_data[states_data["state"] == answer_state]
