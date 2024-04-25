@@ -3,7 +3,7 @@ import turtle
 
 screen = turtle.Screen()
 screen.title("US State Game")
-screen.setup(width=725,height=500)
+screen.setup(width=725, height=500)
 
 IMAGE = "blank_states_img.gif"
 screen.addshape(IMAGE)
